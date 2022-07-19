@@ -22,25 +22,25 @@ const RenderImages = () => {
 
   function shuffle(imagesArray, event) {
     imagesArray.sort(() => Math.random() - 0.5);
-    console.log("shuffle Clicked");
+  //  console.log("shuffle Clicked");
     setImageArray(imagesArray);
 
     // ---------------------------------------------------
-    //might be wrong logic below...
+  
 
     if (!arryOfIds.includes(event.target.id) || arryOfIds === []) {
       arryOfIds.push(event.target.id);
-      console.log("arryOfIds", arryOfIds);
+   //   console.log("arryOfIds", arryOfIds);
       setScore(score + 1);
-      console.log("current score", score);
+   //   console.log("current score", score);
     } else {
       maxScore < score && setMaxScore(score);
       setScore(0);
       // setImageArray([]);
       // setCheck(true);
       arryOfIds = [];
-      console.log("duplicate clicked quit the game");
-      console.log(score, "displaying the max score");
+     // console.log("duplicate clicked quit the game");
+     // console.log(score, "displaying the max score");
     }
 
     // ---------------------------------------------------
