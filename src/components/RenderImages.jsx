@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-// import Renderthis from "./Renderthis";
+ 
 let arryOfIds = [];
 const RenderImages = () => {
   let [score, setScore] = useState(0);
   let [maxScore, setMaxScore] = useState(score);
-  // let [check, setCheck] = useState(false);
+   
   let imagesArray = [
     { src: "./images/img1.jpg", id: 1 },
     { src: "./images/img2.jpg", id: 2 },
@@ -25,9 +25,6 @@ const RenderImages = () => {
   //  console.log("shuffle Clicked");
     setImageArray(imagesArray);
 
-    // ---------------------------------------------------
-  
-
     if (!arryOfIds.includes(event.target.id) || arryOfIds === []) {
       arryOfIds.push(event.target.id);
    //   console.log("arryOfIds", arryOfIds);
@@ -36,14 +33,10 @@ const RenderImages = () => {
     } else {
       maxScore < score && setMaxScore(score);
       setScore(0);
-      // setImageArray([]);
-      // setCheck(true);
       arryOfIds = [];
      // console.log("duplicate clicked quit the game");
      // console.log(score, "displaying the max score");
     }
-
-    // ---------------------------------------------------
   }
 
   return (
@@ -66,7 +59,6 @@ const RenderImages = () => {
           );
         })}
       </div>
-      {/* {check && <Renderthis score={score} />} */}
     </div>
   );
 };
